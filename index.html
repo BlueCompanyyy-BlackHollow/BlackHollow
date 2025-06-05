@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feziacz.PL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+  <header>
+    <h1>Moja Strona</h1>
+    <button onclick="toggleTheme()" class="theme-toggle">🎨 Zmień motyw</button>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="pokazSekcje('sprzet')">Sprzęt</a></li>
+        <li><a href="#" onclick="pokazSekcje('zainteresowania')">Zainteresowania</a></li>
+        <li><a href="#" onclick="pokazSekcje('aktualizacje')">Aktualizacje</a></li>
+        <li><a href="#" onclick="pokazSekcje('portfolio')">Portfolio</a></li>
+        <li><a href="#" onclick="pokazSekcje('polecane')">Moje Polecane</a></li>
+        <li><a href="#" onclick="pokazSekcje('komentarze')">Komentarze</a></li>
+        <li><a href="#" onclick="pokazSekcje('media')">Media Społecznościowe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sprzet" class="aktywna">
+      <h2>Sprzęt</h2>
+      <ul>
+        <li><strong>Procesor:</strong> Intel Core i7-3770K — legendarny staruszek, ale dalej daje radę.</li>
+        <li><strong>Karta graficzna:</strong> MSI GTX 970 — klasyk, który jeszcze nie powiedział ostatniego słowa.</li>
+        <li><strong>Płyta główna:</strong> MSI Z77 MPower — solidna baza pod wszystko, co retro i mocne.</li>
+        <li><strong>Chłodzenie:</strong> NZXT Kraken X63 — styl, cisza i zimno w jednym pakiecie.</li>
+        <li><strong>Obudowa:</strong> Be Quiet! — czarna, minimalistyczna i bez hałasu, jak ninja.</li>
+        <li><strong>Dyski:</strong> SSD 512 GB + HDD 1 TB — szybki start i dużo miejsca na stare gry i chaos.</li>
+        <li><strong>Monitor:</strong> Samsung G3 144Hz — płynność w grach i stylowy wygląd w jednym.</li>
+        <li><strong>Periferia:</strong> Myszka: Dark Project Novus SE • Klawiatura: Redragon Ryze K633</li>
+      </ul>
+    </section>
+
+    <section id="zainteresowania">
+      <h2>Zainteresowania</h2>
+      <p><strong>🧪 Linux:</strong> Uwielbiam bawić się dystrybucjami jak Arch, Fedora, Ubuntu. Terminal to moje naturalne środowisko.</p>
+      <p><strong>🎮 Gry:</strong> Hotline Miami, Postal 2, Doom, Dark Souls. Klimat > grafika.</p>
+      <p><strong>💻 Programowanie:</strong> HTML, Python, JS, Flask. Kodowanie dla zabawy i nauki.</p>
+      <p><strong>🎧 Muzyka:</strong> Synthwave, dark ambient, oldschool hip-hop.</p>
+    </section>
+
+    <section id="aktualizacje">
+      <h2>Aktualizacje</h2>
+      <ul>
+        <li>✅ 2025-06-05 – Dodano tryb jasny/ciemny</li>
+        <li>✅ 2025-06-05 – Dodano zakładki Portfolio, Polecane, Komentarze</li>
+        <li>✅ 2025-06-04 – Poprawiono wygląd i animacje</li>
+      </ul>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <p>(Na razie pusto)</p>
+    </section>
+
+    <section id="polecane">
+      <h2>Moje Polecane</h2>
+      <p>(Na razie pusto)</p>
+    </section>
+
+    <section id="komentarze">
+      <h2>Komentarze</h2>
+      <p>(Funkcja w budowie!)</p>
+    </section>
+
+    <section id="media">
+      <h2>Media Społecznościowe</h2>
+      <div class="media-ikony">
+        <a href="https://www.youtube.com/@RealFeziacz" target="_blank">YouTube</a>
+        <a href="https://m.twitch.tv/realfeziacz/home" target="_blank">Twitch</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Moja Strona</p>
+  </footer>
+
+  <script>
+    function pokazSekcje(nazwa) {
+      document.querySelectorAll("main section").forEach(sekcja => {
+        sekcja.classList.remove("aktywna");
+      });
+      document.getElementById(nazwa).classList.add("aktywna");
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+      document.body.classList.toggle("light-mode");
+    }
+  </script>
+</body>
+</html>
