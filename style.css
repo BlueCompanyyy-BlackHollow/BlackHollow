@@ -1,119 +1,146 @@
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Black Hollow — Oficjalna Strona Gry</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar" aria-label="Główne menu nawigacyjne">
+            <div class="logo" tabindex="0" aria-label="Logo Black Hollow">Black Hollow</div>
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Przełącz menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#about">O grze</a></li>
+                <li><a href="#features">Cechy</a></li>
+                <li><a href="#trailer">Zwiastun</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#download">Pobierz</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  transition: background 0.5s, color 0.5s;
-}
+    <main>
+        <!-- Hero -->
+        <section class="hero-section" role="banner" aria-label="Witamy na stronie Black Hollow">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>Black Hollow</h1>
+                <p>Przeżyj brutalną podróż przez mroczne, tajemnicze światy soulslike.</p>
+                <a href="#download" class="btn-primary">Pobierz demo</a>
+            </div>
+        </section>
 
-/* DARK MODE */
-body.dark-mode {
-  background: linear-gradient(135deg, #1e1e2f, #2b2b3f);
-  color: #eee;
-}
+        <!-- About -->
+        <section id="about" class="section about-section" aria-labelledby="about-title" tabindex="0">
+            <h2 id="about-title">O grze</h2>
+            <div class="about-flex">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Mroczny las w grze Black Hollow" />
+                <div class="about-text">
+                    <p>Black Hollow to mroczna gra soulslike osadzona w brutalnym świecie, gdzie każda walka jest wyzwaniem, a każdy zakręt może być ostatnim.</p>
+                    <p>Eksploruj nieznane tereny, odkrywaj sekrety i walcz z potężnymi przeciwnikami. Stwórz własny styl walki i przeżyj przygodę, która zapadnie Ci w pamięć.</p>
+                </div>
+            </div>
+        </section>
 
-body.light-mode {
-  background: linear-gradient(135deg, #f0f0f0, #ffffff);
-  color: #111;
-}
+        <!-- Features -->
+        <section id="features" class="section features-section" aria-labelledby="features-title" tabindex="0">
+            <h2 id="features-title">Cechy gry</h2>
+            <div class="features-grid">
+                <article class="feature-card" tabindex="0" aria-label="Duże bronie i broń palna">
+                    <img src="https://img.icons8.com/ios-filled/50/1e90ff/sword.png" alt="Ikona miecza" class="feature-icon" />
+                    <h3>Duże bronie i broń palna</h3>
+                    <p>Używaj ciężkich mieczy, młotów, toporów oraz muszkietów i rewolwerów, aby sprostać zagrożeniom.</p>
+                </article>
+                <article class="feature-card" tabindex="0" aria-label="Brutalny i mroczny świat">
+                    <img src="https://img.icons8.com/ios-filled/50/1e90ff/skull.png" alt="Ikona czaszki" class="feature-icon" />
+                    <h3>Brutalny i mroczny świat</h3>
+                    <p>Przemierzaj mroczne krainy pełne niebezpieczeństw, tajemnic i wymagających przeciwników.</p>
+                </article>
+                <article class="feature-card" tabindex="0" aria-label="Rozbudowana mechanika walki">
+                    <img src="https://img.icons8.com/ios-filled/50/1e90ff/shield.png" alt="Ikona tarczy" class="feature-icon" />
+                    <h3>Rozbudowana mechanika walki</h3>
+                    <p>Szybkie uniki, parowanie i zarządzanie staminą zapewnią Ci przewagę w starciach.</p>
+                </article>
+                <article class="feature-card" tabindex="0" aria-label="Eksploracja i odkrywanie">
+                    <img src="https://img.icons8.com/ios-filled/50/1e90ff/map.png" alt="Ikona mapy" class="feature-icon" />
+                    <h3>Eksploracja i odkrywanie</h3>
+                    <p>Odkrywaj ukryte lokacje, sekrety i unikalne przedmioty, które pomogą Ci przetrwać.</p>
+                </article>
+            </div>
+        </section>
 
-header {
-  background: #111827;
-  text-align: center;
-  padding: 25px 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
+        <!-- Trailer -->
+        <section id="trailer" class="section trailer-section" aria-labelledby="trailer-title" tabindex="0">
+            <h2 id="trailer-title">Zwiastun</h2>
+            <div class="video-wrapper" role="region" aria-label="Zwiastun gry Black Hollow">
+                <video controls poster="" preload="metadata">
+                    <source src="trailer.mp4" type="video/mp4" />
+                    Twój przeglądarka nie obsługuje wideo.
+                </video>
+            </div>
+        </section>
 
-.theme-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #444;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-}
+        <!-- Gallery -->
+        <section id="gallery" class="section gallery-section" aria-labelledby="gallery-title" tabindex="0">
+            <h2 id="gallery-title">Galeria</h2>
+            <div class="gallery-grid">
+                <img src="" alt="Screenshot z gry Black Hollow 1" tabindex="0" />
+                <img src="" alt="Screenshot z gry Black Hollow 2" tabindex="0" />
+                <img src="" alt="Screenshot z gry Black Hollow 3" tabindex="0" />
+                <img src="" alt="Screenshot z gry Black Hollow 4" tabindex="0" />
+            </div>
+        </section>
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0 0 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
+        <!-- Download -->
+        <section id="download" class="section download-section" aria-labelledby="download-title" tabindex="0">
+            <h2 id="download-title">Pobierz demo</h2>
+            <p>Demo w przygotowaniu — wkrótce dostępne do pobrania!</p>
+            <button class="btn-primary btn-download" aria-describedby="download-desc" disabled>Pobierz (wkrótce)</button>
+            <p id="download-desc" class="sr-only">Przycisk jest tymczasowo nieaktywny</p>
+        </section>
 
-nav ul li a {
-  text-decoration: none;
-  color: #cbd5e1;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
+        <!-- FAQ -->
+        <section id="faq" class="section faq-section" aria-labelledby="faq-title" tabindex="0">
+            <h2 id="faq-title">Najczęściej zadawane pytania</h2>
+            <div class="faq-item" tabindex="0">
+                <button aria-expanded="false" aria-controls="faq1" aria-label="Rozwiń pytanie Jakie są wymagania sprzętowe?">
+                    Jakie są wymagania sprzętowe?
+                </button>
+                <div id="faq1" class="faq-answer" hidden>
+                    <p>Minimalne wymagania: CPU i5, 8 GB RAM, karta graficzna GTX 970 lub lepsza, 20 GB wolnego miejsca.</p>
+                </div>
+            </div>
+            <div class="faq-item" tabindex="0">
+                <button aria-expanded="false" aria-controls="faq2" aria-label="Rozwiń pytanie Czy będzie tryb multiplayer?">
+                    Czy będzie tryb multiplayer?
+                </button>
+                <div id="faq2" class="faq-answer" hidden>
+                    <p>W planach jest tryb kooperacji oraz PvP w kolejnych aktualizacjach.</p>
+                </div>
+            </div>
+            <div class="faq-item" tabindex="0">
+                <button aria-expanded="false" aria-controls="faq3" aria-label="Rozwiń pytanie Jakie bronie będą dostępne?">
+                    Jakie bronie będą dostępne?
+                </button>
+                <div id="faq3" class="faq-answer" hidden>
+                    <p>Duże miecze, topory, młoty, a także broń palna: muszkiety, pistolety i rewolwery.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
+    <footer class="footer">
+        <p>&copy; 2025 Black Hollow. Wszystkie prawa zastrzeżone.</p>
+        <p><a href="#privacy">Polityka prywatności</a></p>
+    </footer>
 
-main {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 20px;
-}
+    <script src="script.js" defer></script>
+</body>
+</html>
 
-section {
-  display: none;
-  animation: fadeIn 0.4s ease-in-out forwards;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-section.aktywna {
-  display: block;
-}
-
-h2 {
-  color: #60a5fa;
-}
-
-footer {
-  background: #111827;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-top: 50px;
-}
-
-.media-ikony a {
-  margin-right: 15px;
-  font-weight: bold;
-  color: #60a5fa;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
